@@ -6,3 +6,7 @@
 2. 你可以编程入门
 3. 大学只要是理工科一定会用到编程
 4. 大学通常都会考计算机二级,包括pyton二级
+
+本教程
+- github地址 https://github.com/Rainboylvx/python-tutorial
+- 外网地址: https://py.slimeoj.online/
