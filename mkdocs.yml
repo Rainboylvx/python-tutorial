@@ -6,14 +6,15 @@ nav:
   - "3. 变量类型": variable-type.md
   - "4. input 输入": input.md
   - "5. print 再学": print2.md
-  - "6. 练习 1": practice1.md
-  - "7. if 双分支": if.md
-  - "8. if 单分支": if2.md
-  - "9. if 多分支": if3.md
-  - "10. if 练习": "if-practice.md"
-  - "11. 逻辑表达式": "if-logic.md"
-  - "12. for循环入门": "for-loop1.md"
-  - "13. for循环2": "for-loop2.md"
+  - "6. OJ 输入与 A+B": oj-input.md
+  - "7. 练习 1": practice1.md
+  - "8. if 双分支": if.md
+  - "9. if 单分支": if2.md
+  - "10. if 多分支": if3.md
+  - "11. if 练习": "if-practice.md"
+  - "12. 逻辑表达式": "if-logic.md"
+  - "13. for循环入门": "for-loop1.md"
+  - "14. for循环2": "for-loop2.md"
 
 theme:
   name: material
