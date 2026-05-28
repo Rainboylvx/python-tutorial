@@ -10,3 +10,37 @@
 本教程
 - github地址 https://github.com/Rainboylvx/python-tutorial
 - 外网地址: https://py.slimeoj.online/
+
+## Docker 运行
+
+国内推荐使用南京大学 GHCR 加速地址拉取镜像:
+
+```bash
+docker pull ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest
+docker run --rm -p 8081:80 ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest
+```
+
+也可以使用官方 GHCR 地址:
+
+```bash
+docker pull ghcr.io/rainboylvx/python-tutorial:latest
+docker run --rm -p 8081:80 ghcr.io/rainboylvx/python-tutorial:latest
+```
+
+启动后在浏览器访问:
+
+```text
+http://localhost:8081
+```
+
+也可以使用 compose 快速启动:
+
+```bash
+sh install.sh
+```
+
+如果需要修改端口:
+
+```bash
+PYTHON_TUTORIAL_PORT=8000 sh install.sh
+```

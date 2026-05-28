@@ -1,0 +1,7 @@
+services:
+  python-tutorial:
+    image: ${PYTHON_TUTORIAL_IMAGE:-ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest}
+    container_name: python-tutorial
+    restart: unless-stopped
+    ports:
+      - "${PYTHON_TUTORIAL_PORT:-8081}:80"
