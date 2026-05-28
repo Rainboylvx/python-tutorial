@@ -1,118 +1,140 @@
+# `input()` 输入函数
 
+## 学习目标
 
-##  Python input函数使用指南
+学完这一课，你应该能够：
 
-📝 `input()` 是Python中最基础的输入函数，帮助程序与用户进行交互。本教程将带您掌握以下内容：
+1. 使用 `input()` 接收键盘输入。
+2. 知道 `input()` 得到的内容是字符串。
+3. 使用 `int()` 把输入内容转换成整数。
+4. 编写简单的输入计算程序。
 
-1. → 基础语法与返回值
-2. → 类型转换技巧
-3. → 实用案例演示
-4. → 常见问题解析
+## `input()` 的基本用法
 
+`input()` 可以让程序暂停下来，等待用户从键盘输入内容。
 
-## 一、基础用法
+基本格式：
 
 ```python
-# 基本语法结构
 变量名 = input("提示信息")
 ```
 
-- 显示提示信息（可选）
-- 等待用户输入
-- 用户按回车确认输入
-- 返回字符串类型数据
+执行过程是：
 
-## 二，小例子
+1. 屏幕显示提示信息。
+2. 用户输入内容。
+3. 用户按回车。
+4. Python 把输入内容保存到变量里。
+
+## 第一个例子
 
 ```python
-name = input("input your name：")
-print("your name is : ",name)
+name = input("input your name: ")
+print("your name is:", name)
 ```
 
-在IDLE里输入代码，根据提示输入名字: Tom.
+在 IDLE 中运行后，根据提示输入名字，例如 `Tom`。
 
 ![image1](./images/input1.png)
 
 ![image2](./images/input2.png)
 
+## `input()` 得到的是什么类型
 
-## 三，input 得到的数据的类型
-
-上面的代码中变量`name`中存的数据由`input`通过键盘得到,那么数据类型是什么呢。我们到这里只学过两种数据类型： `Number`, `String` .这里的`name`的类型是字符串，因为`tom`不可能是数字.所以上面的代码相当于
+请看这个程序：
 
 ```python
-print("tom")
+a = input("input some number: ")
+print("a is:", a)
 ```
 
-思维迁移。所以下面的的代码如果输入数字`123`，那也会输出`123`，这里输出的内容也是：`123`
+如果你输入 `123`，屏幕会输出：
 
-```python
-a = input("input some number:")
-print("a is :",a)
+```text
+a is: 123
 ```
 
-问：这里的变量`a`里面存的数据类型是`Number`还是`String`?
+但是这里的 `a` 不是数字，而是字符串。
 
-
-
-答：是字符串`String`
-
-证明如下
+也就是说，输入的 `123` 相当于：
 
 ```python
-a = input("input some number:")
-print("a+1 is :",a+1)
+a = "123"
 ```
 
-上面的代码会运行报错，因为数字不能与`String`相加!
-
-## 四，得到数字 
-
-这里我们使用`int()`，它的作用是把只含有数字模式的字符串转化成对的数字
+为什么要特别注意这一点？因为字符串不能直接和数字相加。
 
 ```python
-a = int("123")
-print("a+1 is :",a+1)
+a = input("input some number: ")
+print("a + 1 is:", a + 1)
 ```
 
-结合上面所学：
+这段代码会报错，因为 `a` 是字符串，`1` 是整数。
 
+## 输入数字时使用 `int()`
+
+如果你希望输入的内容作为数字使用，需要用 `int()` 转换。
 
 ```python
-a = int(input("input some number:"))
-print("a+1 is :",a+1)
+a = int(input("input some number: "))
+print("a + 1 is:", a + 1)
 ```
 
-## 五，练习1: 简易加法器
+如果输入 `123`，输出就是：
 
-输入两个数字，计算它们的和
-
-```python
-a = int(input("input first number："))
-b = int(input("input second number："))
-print(a,"+",b,"=",a+b)
+```text
+a + 1 is: 124
 ```
 
-
-## 六，练习2: 分钟小时转换
-
-输入一个数字，转换成多少个小时多少分钟
-
-这里我们需要学习一个新的计算符号,
-
-- `%`，`c = 8 % 6`,这里c是2，得到是**余数**
-- `//`，`c = 8 // 6`,这里c是1，得到的是**商**
+可以把这行代码拆开理解：
 
 ```python
-# 获取用户输入的分钟数，并将其转换为整数类型
-total_minutes = int(input("input minutes："))
+text = input("input some number: ")
+a = int(text)
+print(a + 1)
+```
 
-# 计算完整的小时数：将总分钟数除以 60，取整数部分
+第一步先得到字符串，第二步再转换成整数。
+
+## 练习 1：简易加法器
+
+输入两个整数，计算它们的和。
+
+```python
+a = int(input("input first number: "))
+b = int(input("input second number: "))
+print(a, "+", b, "=", a + b)
+```
+
+## 练习 2：分钟转换
+
+输入一个分钟数，转换成“多少小时多少分钟”。
+
+这里会用到两个运算符：
+
+- `%`：取余数。例如 `8 % 6` 的结果是 `2`。
+- `//`：整除。例如 `8 // 6` 的结果是 `1`。
+
+```python
+total_minutes = int(input("input minutes: "))
+
 hours = total_minutes // 60
-
-# 计算剩余的分钟数：将总分钟数对 60 取余
 minutes = total_minutes % 60
 
-# 输出结果，格式为 "小时 分钟"
 print(hours, minutes)
 ```
+
+如果输入 `125`，输出：
+
+```text
+2 5
+```
+
+意思是 `125` 分钟等于 `2` 小时 `5` 分钟。
+
+## 本课小结
+
+- `input()` 用来接收键盘输入。
+- `input()` 得到的内容默认是字符串。
+- 要把输入当作整数计算，需要写 `int(input(...))`。
+- 输入计算题常见步骤是：输入、转换、计算、输出。

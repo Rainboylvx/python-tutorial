@@ -1,12 +1,23 @@
-# Welcome 
+# Python 3 入门教程
 
-这里是我写的python3教程,目标 
+欢迎来到这套 Python 3 入门教程。
 
-1. 帮助你快入门并通过考试
-2. 你可以编程入门
-3. 大学只要是理工科一定会用到编程
-4. 大学通常都会考计算机二级,包括pyton二级
+这套课程面向零基础同学，目标是让你先把最常用的语法学会，再通过练习把它们真正用起来。
 
-本教程
-- github地址 https://github.com/Rainboylvx/python-tutorial
-- 外网地址: https://py.slimeoj.online/
+学习完本教程后，你应该能够：
+
+1. 会使用 Python 写出简单程序。
+2. 理解变量、输入输出、条件判断和循环。
+3. 能看懂基础题目的要求，并写代码解决问题。
+4. 为后续考试、竞赛或大学课程打好基础。
+
+## 如何学习
+
+- 先读概念，再运行示例代码。
+- 每学完一节，都要亲手完成练习。
+- 如果程序报错，先看错误信息，再检查拼写、缩进和符号。
+
+## 项目地址
+
+- GitHub 地址：https://github.com/Rainboylvx/python-tutorial
+- 在线地址：https://py.slimeoj.online/

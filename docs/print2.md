@@ -1,84 +1,153 @@
-# **print() 函数使用教程**
+# 再学 `print()`
 
-## **1. 基础打印**
+## 学习目标
+
+学完这一课，你应该能够：
+
+1. 使用 `print()` 输出文字、数字和变量。
+2. 使用逗号同时输出多个内容。
+3. 使用 f-string 让输出更清楚。
+4. 了解换行、不换行和制表符。
+
+## 1. 直接打印内容
+
 ```python
-# 直接打印文字
 print("Hello World!")
-print("欢迎学习Python")
-
-# 打印数字
+print("欢迎学习 Python")
 print(100)
 print(3.14)
 ```
 
-## **2. 打印变量**
+文字需要加引号，数字可以直接写。
+
+## 2. 打印变量
+
 ```python
 name = "小明"
 age = 18
 score = 95.5
 
-print(name)      # 打印变量值
+print(name)
 print(age)
 print(score)
 ```
 
-## **3. 组合打印（逗号分隔）**
-```python
-# 自动用空格分隔
-print("学生姓名：", name, "年龄：", age, "分数：", score)
+`print()` 会把变量里存的内容输出到屏幕上。
 
-# 打印多个变量
-x = 10
-y = 20
-print("x =", x, "y =", y, "x+y =", x+y)
+## 3. 使用逗号组合输出
+
+逗号可以把多个内容放在同一个 `print()` 里。
+
+```python
+name = "小明"
+age = 18
+score = 95.5
+
+print("学生姓名：", name, "年龄：", age, "分数：", score)
 ```
 
-## **4. f-string 格式化打印（推荐！）**
-```python
-# 在字符串前加 f，用 {} 包裹变量
-print(f"学生姓名：{name}，年龄：{age}，分数：{score}")
+逗号输出的好处是简单，而且会自动在内容之间加空格。
 
-# 可以直接进行计算
+再看一个计算例子：
+
+```python
+x = 10
+y = 20
+print("x =", x, "y =", y, "x + y =", x + y)
+```
+
+## 4. 使用 f-string 输出
+
+f-string 是非常推荐的输出方式。
+
+写法是在字符串前面加 `f`，再用 `{}` 放入变量或表达式。
+
+```python
+name = "小明"
+age = 18
+score = 95.5
+
+print(f"学生姓名：{name}，年龄：{age}，分数：{score}")
+```
+
+也可以直接写计算：
+
+```python
 price = 25.5
 quantity = 3
 total = price * quantity
+
 print(f"商品单价：{price}元")
-print(f"购买数量：{quantity}个")  
+print(f"购买数量：{quantity}个")
 print(f"总计：{total}元")
+```
 
-# 数字格式化
+控制小数位数：
+
+```python
 pi = 3.1415926
-print(f"圆周率：{pi:.2f}")  # 保留2位小数
+print(f"圆周率：{pi:.2f}")
 ```
 
-## **5. 字符串拼接打印**
+输出：
+
+```text
+圆周率：3.14
+```
+
+## 5. 字符串拼接输出
+
+字符串可以用 `+` 拼接。
+
 ```python
-# 用 + 号连接字符串
+name = "小明"
+age = 18
+
 print("学生姓名：" + name + "，年龄：" + str(age))
-
-# 注意：数字需要先转换为字符串
-print("总分：" + str(score) + "分")
 ```
 
-## **6. 特殊格式打印**
+注意：数字要先用 `str()` 转换成字符串，才能和字符串拼接。
+
+初学时更推荐使用 f-string，因为更清楚。
+
+## 6. 特殊格式
+
+### 换行
+
 ```python
-# 换行打印
-print("第一行\n第二行")  # \n 表示换行
+print("第一行\n第二行")
+```
 
-# 不换行打印
-print("Hello", end=" ")  # end="" 指定结束符
+`\n` 表示换行。
+
+### 不换行
+
+```python
+print("Hello", end=" ")
 print("World!", end="")
-# 输出：Hello World!
+```
 
-# 制表符（对齐）
-print("姓名\t年龄\t分数")  # \t 相当于按Tab键
+输出：
+
+```text
+Hello World!
+```
+
+`end` 可以指定 `print()` 结尾使用什么内容。默认结尾是换行。
+
+### 制表符
+
+```python
+print("姓名\t年龄\t分数")
 print("小明\t18\t95.5")
 print("小红\t17\t88.0")
 ```
 
-## **7. 实际应用示例**
+`\t` 类似按一次 Tab 键，可以帮助内容对齐。
+
+## 7. 综合例子
+
 ```python
-# 学生信息卡片
 student_name = "张三"
 student_class = "高一(3)班"
 math_score = 92
@@ -93,14 +162,13 @@ print(f"总分：{math_score + english_score}分")
 print("=" * 30)
 ```
 
-## **打印技巧总结**
-| 方法 | 示例 | 优点 |
+## 本课小结
+
+| 方法 | 示例 | 特点 |
 |------|------|------|
-| 逗号分隔 | `print("x=", x)` | 简单，自动加空格 |
-| f-string | `print(f"x={x}")` | 最清晰，功能强 |
-| 字符串拼接 | `print("x=" + str(x))` | 需要转换数字 |
-| 格式化数字 | `print(f"{pi:.2f}")` | 控制小数位数 |
+| 逗号分隔 | `print("x =", x)` | 简单，会自动加空格 |
+| f-string | `print(f"x = {x}")` | 清楚，推荐使用 |
+| 字符串拼接 | `print("x=" + str(x))` | 数字需要先转换 |
+| 格式化数字 | `print(f"{pi:.2f}")` | 可以控制小数位数 |
 
-**建议初学者多使用 f-string，既简单又强大！**
-
-需要我解释哪个部分或者提供更多例子吗？
+建议初学者优先使用 f-string。
