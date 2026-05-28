@@ -1,2 +1,3 @@
 mkdocs build
-rsync -r --progress --delete ./site/ /vol1/1000/docker/baota/website_data/192.168.0.216/
+#rsync -r --progress --delete ./site/ /vol1/1000/docker/baota/website_data/192.168.0.216/
+rsync -r --progress --delete ./site/ /vol2/1000/docker/nginx-proxy-manager/python_site

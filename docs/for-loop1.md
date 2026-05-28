@@ -316,7 +316,51 @@ for i in range(1,6):
 print(f"total= {total}")
 ```
 
-### 6. 99乘法表格
+### 6. 求 阶乘
+
+定义: $n! = 1 \times 2 \times 3 \times \cdots \times n$
+
+输入一个数字 $n$,输出对应的阶乘,比如输入的是$3$,那么结果是$6$,因为$1 \times 2 \times  3 = 6$
+
+<details>
+<summary><b>点这里查看参考答案 </b></summary>
+
+```python
+n = int(input())
+ans = 1
+for i in range(1, n+1):
+    ans = ans * i
+print(ans)
+```
+
+</details>
+
+### 7. 求阶乘的和
+
+定义: 
+$$
+\sum_{i=1}^n i! = 1! + 2! + \cdots + n!
+$$
+
+输入一个数字 $n$,输出对应的阶乘和,比如输入的是$3$,那么结果是$9$,因为$1! + 2! + 3! = 9$
+
+<details>
+<summary><b>点这里查看参考答案 </b></summary>
+
+```python
+n = int(input())
+sum = 0;
+for i in range(1,n+1):
+    # 注意这个的代码和 求阶乘一样
+    ans = 1
+    for j in range(1, i+1):
+        ans = ans * j
+    sum = sum + ans
+print(sum)
+```
+</details>
+
+### 8. 99乘法表格
 
 
 ```python
