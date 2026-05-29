@@ -17,20 +17,20 @@
 
 ```bash
 docker pull ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest
-docker run --rm -p 8081:80 ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest
+docker run --rm -p 8123:80 ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest
 ```
 
 也可以使用官方 GHCR 地址:
 
 ```bash
 docker pull ghcr.io/rainboylvx/python-tutorial:latest
-docker run --rm -p 8081:80 ghcr.io/rainboylvx/python-tutorial:latest
+docker run --rm -p 8123:80 ghcr.io/rainboylvx/python-tutorial:latest
 ```
 
 启动后在浏览器访问:
 
 ```text
-http://localhost:8081
+http://localhost:8123
 ```
 
 也可以使用 compose 快速启动:

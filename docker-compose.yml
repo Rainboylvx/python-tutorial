@@ -4,4 +4,4 @@ services:
     container_name: python-tutorial
     restart: unless-stopped
     ports:
-      - "${PYTHON_TUTORIAL_PORT:-8081}:80"
+      - "${PYTHON_TUTORIAL_PORT:-8123}:80"

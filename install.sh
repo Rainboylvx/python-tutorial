@@ -5,7 +5,7 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 cd "$SCRIPT_DIR"
 
 IMAGE=${PYTHON_TUTORIAL_IMAGE:-ghcr.nju.edu.cn/rainboylvx/python-tutorial:latest}
-PORT=${PYTHON_TUTORIAL_PORT:-8081}
+PORT=${PYTHON_TUTORIAL_PORT:-8123}
 
 if ! command -v docker >/dev/null 2>&1; then
   echo "Error: docker is not installed." >&2
