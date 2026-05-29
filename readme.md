@@ -36,11 +36,5 @@ http://localhost:8123
 也可以使用 compose 快速启动:
 
 ```bash
-sh install.sh
-```
-
-如果需要修改端口:
-
-```bash
-PYTHON_TUTORIAL_PORT=8000 sh install.sh
+docker compose up -d
 ```
