@@ -38,3 +38,16 @@ http://localhost:8123
 ```bash
 docker compose up -d
 ```
+
+如果镜像已经启动过，更新到最新版本可以这样做:
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+也可以一步完成:
+
+```bash
+docker compose up -d --pull always
+```
